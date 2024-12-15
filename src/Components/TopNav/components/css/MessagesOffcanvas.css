@@ -1,0 +1,41 @@
+
+.messages-oc{
+	transition: transform 0.5s ease-in-out;
+	background-color: #26282b;
+	border: none;
+	min-height: 100% !important;
+	box-shadow: 0px 40px 50px #b6eada6c;
+}
+
+.messages-oc-title {
+	color: #b6eada;
+}
+
+.messages-oc-list {
+	background: #1e1e1e;
+	border: none;
+	border-radius: 20px;
+	margin-bottom: 1rem;
+	box-shadow: 0px 40px 50px #b6eada6c;
+}
+
+.messages-oc-list:first-child {
+	border-radius: 20px;
+}
+
+.messages-oc-list:last-child {
+	border-radius: 20px;
+}
+
+.messages-oc-list-subheadings {
+	color: #9398a1;
+}
+
+.messages-oc-list-message {
+	color: #9398a1;
+}
+
+.messages-oc-list-badge {
+	background: #b6eada !important;
+	color: #26282b;
+}

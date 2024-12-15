@@ -1,0 +1,44 @@
+.notifications-oc {
+	transition: transform 0.5s ease-in-out;
+	background-color: #26282b;
+	border: none;
+	min-width: 100% !important;
+	box-shadow: 0px 40px 50px #b6eada6c;
+}
+
+.offcanvas-backdrop {
+	transition: opacity 0.4s ease-in-out;
+}
+
+.notifications-oc-title {
+	color: #b6eada;
+}
+
+.notifications-oc-list {
+	background: #1e1e1e;
+	border: none;
+	border-radius: 20px;
+	margin-bottom: 1rem;
+	box-shadow: 0px 40px 50px #b6eada6c;
+}
+
+.notifications-oc-list:first-child {
+	border-radius: 20px;
+}
+
+.notifications-oc-list:last-child {
+	border-radius: 20px;
+}
+
+.notifications-oc-list-subheadings {
+	color: #9398a1;
+}
+
+.notifications-oc-list-message {
+	color: #9398a1;
+}
+
+.notifications-oc-list-badge {
+	background: #b6eada !important;
+	color: #26282b;
+}
