@@ -38,7 +38,6 @@ export default function Home() {
 		{
 			title: "Why Invest?",
 			img: whyInvestImg,
-			
 		},
 		{
 			title: "What is the Stock Market?",
@@ -81,54 +80,58 @@ export default function Home() {
 		},
 	];
 
-    const newsCards = [
-        {
-            title: "News Title 1",
-            description: "News Description",
-            img: "https://via.placeholder.com/300x200",
-        },
-        {
-            title: "News Title 2",
-            description: "News Description",
-            img: "https://via.placeholder.com/300x200",
-        },
-        {
-            title: "News Title 3",
-            description: "News Description",
-            img: "https://via.placeholder.com/300x200",
-        },
-        {
-            title: "News Title 4",
-            description: "News Description",
-            img: "https://via.placeholder.com/300x200",
-        },
-        {
-            title: "News Title 5",
-            description: "News Description",
-            img: "https://via.placeholder.com/300x200",
-        },
-        {
-            title: "News Title 6",
-            description: "News Description",
-            img: "https://via.placeholder.com/300x200",
-        },
-        {
-            title: "News Title 7",
-            description: "News Description",
-            img: "https://via.placeholder.com/300x200",
-        },
-    ];
+	const newsCards = [
+		{
+			title: "News Title 1",
+			description: "News Description",
+			img: "https://via.placeholder.com/300x200",
+		},
+		{
+			title: "News Title 2",
+			description: "News Description",
+			img: "https://via.placeholder.com/300x200",
+		},
+		{
+			title: "News Title 3",
+			description: "News Description",
+			img: "https://via.placeholder.com/300x200",
+		},
+		{
+			title: "News Title 4",
+			description: "News Description",
+			img: "https://via.placeholder.com/300x200",
+		},
+		{
+			title: "News Title 5",
+			description: "News Description",
+			img: "https://via.placeholder.com/300x200",
+		},
+		{
+			title: "News Title 6",
+			description: "News Description",
+			img: "https://via.placeholder.com/300x200",
+		},
+		{
+			title: "News Title 7",
+			description: "News Description",
+			img: "https://via.placeholder.com/300x200",
+		},
+	];
 
 	return (
 		<Container fluid className="home-container mb-5">
 			{/* Stock Screeners Section */}
 			<Row className="mt-2">
-				<Col xs={6} className="d-flex justify-content-start align-items-center mb-2">
+				<Col
+					xs={6}
+					className="d-flex justify-content-start align-items-center mb-2">
 					<h5>
 						<b>Stock Screeners</b>
 					</h5>
 				</Col>
-				<Col xs={6} className="d-flex justify-content-end align-items-center mb-2">
+				<Col
+					xs={6}
+					className="d-flex justify-content-end align-items-center mb-2">
 					<FontAwesomeIcon icon={faCircleExclamation} />
 				</Col>
 			</Row>
@@ -202,28 +205,29 @@ export default function Home() {
 			</Row>
 			<Row>
 				<Col>
-					<div className="news-cards-container p-2"> 
-                        {newsCards.map((newsCard, idx) => (
-						<Card key={idx} className="bg-dark text-white news-card mb-3">
-							<Card.Img src={newsCard.img} alt={`News Card ${idx + 1}`}  className="news-card-image"/>
-							<Card.ImgOverlay className="d-flex flex-column justify-content-end">
-								<Card.Title className="fw-bold">{newsCard.title}</Card.Title>
-								<Card.Text>{newsCard.text}</Card.Text>
-							</Card.ImgOverlay>
-						</Card>
-                        ))}
+					<div className="news-cards-container p-2">
+						{newsCards.map((newsCard, idx) => (
+							<Card key={idx} className="bg-dark text-white news-card mb-3">
+								<Card.Img
+									src={newsCard.img}
+									alt={`News Card ${idx + 1}`}
+									className="news-card-image"
+								/>
+								<Card.ImgOverlay className="d-flex flex-column justify-content-end">
+									<Card.Title className="fw-bold">{newsCard.title}</Card.Title>
+									<Card.Text>{newsCard.text}</Card.Text>
+								</Card.ImgOverlay>
+							</Card>
+						))}
 					</div>
 				</Col>
 			</Row>
 			<Row>
 				<Col>
 					<h5>Luke thinks im using a template...</h5>
-					
 				</Col>
 			</Row>
-			<Row>
-
-			</Row>
+			<Row></Row>
 		</Container>
 	);
 }
