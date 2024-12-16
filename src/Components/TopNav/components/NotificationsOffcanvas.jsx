@@ -21,7 +21,7 @@ export default function NotificationsOffcanvas({ show, handleCloseNotifications,
               <div className="d-flex align-items-center">
                 {/* Rounded Profile Image */}
                 <Image
-                  src="https://via.placeholder.com/40" // Replace with actual image URLs
+                  src="https://via.placeholder.com/40"
                   roundedCircle
                   className="me-3"
                   alt="User Profile"

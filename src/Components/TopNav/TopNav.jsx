@@ -59,7 +59,7 @@ export default function TopNav() {
   ];
 
   return (
-    <Navbar collapseOnSelect expand="lg" variant="dark" fixed="top" className="top-nav">
+    <Navbar collapseOnSelect expand="lg" variant="dark" className="top-nav" sticky="top">
       <Container fluid>
         <Nav className="flex-row">
           <Nav.Link
