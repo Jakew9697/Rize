@@ -46,16 +46,16 @@ export default function Home() {
       description: "Companies reporting earnings in the next 2 weeks",
     },
     {
-      title: "Most Active Stocks",
-      description: "Stocks with the highest trading volume today",
+      title: "New 52-Week Highs",
+      description: "Stocks that broek their 52-week high today",
     },
     {
-      title: "Top Gainers",
-      description: "Stocks with the biggest percentage gains today",
+      title: "New 52-Week Lows",
+      description: "Stocks that broke their 52-week low today",
     },
     {
-      title: "Top Losers",
-      description: "Stocks with the biggest percentage losses today",
+      title: "Analyst Picks",
+      description: "Stock picks from third-party analysts",
     },
   ];
 
