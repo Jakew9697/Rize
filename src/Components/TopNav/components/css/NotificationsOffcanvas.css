@@ -1,5 +1,5 @@
 .notifications-oc {
-	transition: transform 0.5s ease-in-out;
+	transition: transform 0.3s ease-in-out;
 	background-color: #26282b;
 	border: none;
 	min-width: 100% !important;
@@ -7,7 +7,7 @@
 }
 
 .offcanvas-backdrop {
-	transition: opacity 0.4s ease-in-out;
+	transition: opacity 0.3s ease-in-out;
 }
 
 .notifications-oc-title {

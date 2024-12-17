@@ -1,6 +1,6 @@
 
 .messages-oc{
-	transition: transform 0.5s ease-in-out;
+	transition: transform 0.3s ease-in-out;
 	background-color: #26282b;
 	border: none;
 	min-height: 100% !important;

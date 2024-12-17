@@ -1,31 +1,83 @@
-/* learn how to add a blur motion effect for the learn cards section. */
-
-.home-container {
+/* Stock screeners section styles */
+.home-stock-screeners-title {
 	color: white;
-}
-
-.learn-cards-container {
+  }
+  
+  .home-stock-screeners-info-icon {
+	color: white;
+  }
+  
+  .home-stock-screeners-list-item {
+	background: transparent;
+	color: white;
 	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	max-height: 1000px;
+	transition: all 0.1s ease; 
+  }
+  
+  .home-stock-screeners-list-item.collapsed {
+	max-height: 0;
+	opacity: 0;
+	transform: translateX(-100px);
+	padding: 0 1px;
+	border: none;
+  }
+  
+  /* Show More / Show Less Button Styles */
+  .home-stock-screeners-show-more {
+	color: white;
+	cursor: pointer;
+	text-decoration: none;
+  }
+  
+  .home-stock-screeners-list-item-arrow {
+	color: #B6EADA;
+  }
+  
+  .home-stock-screeners-show-more,
+  .home-stock-screeners-show-more:active,
+  .home-stock-screeners-show-more:focus {
+	color: #B6EADA !important;
+  }
+  
+  .home-stock-screeners-show-more:hover {
+	color: #45b493 !important;
+  }
+  
+  .home-learn-title {
+	color: white;
+  }
+  
+  .learn-cards-container {
 	overflow-x: auto;
 	scroll-snap-type: x mandatory;
-	gap: 15px;
-}
-
-.learn-card {
+	gap: 1rem;
+  }
+  
+  .learn-card {
+	background: transparent;
 	flex: 0 0 auto;
 	width: 250px;
-	border-radius: 8px;
+	border-radius: 15%;
 	overflow: hidden;
 	scroll-snap-align: center;
-}
-
-.learn-card-img {
+  }
+  
+  .learn-card-img {
 	height: 100%;
 	width: 100%;
-	object-fit:fill;
-}
-
-.learn-card .card-img-overlay {
-	background: linear-gradient(to top, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.2));
+	object-fit: fill;
+  }
+  
+  .learn-card .card-img-overlay {
+	background: linear-gradient(to top, rgba(0, 0, 0, 0.485), rgba(0, 0, 0, 0.052));
 	color: white;
-}
+  }
+  
+  /* News section styles */
+  .home-news-title {
+	color: white;
+  }
+  

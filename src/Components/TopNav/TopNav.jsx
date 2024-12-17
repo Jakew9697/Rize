@@ -65,7 +65,7 @@ export default function TopNav() {
           <Nav.Link
             as={Link}
             to="/home"
-            className="d-flex align-items-center"
+            className="top-nav-logo d-flex align-items-center"
             onClick={() => console.log("Home")}
           >
             <h2 className="m-0">Rize</h2>
