@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { Container, Row, Col, ListGroup, Card, Button } from "react-bootstrap";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
@@ -7,6 +8,8 @@ import {
   faCaretUp,
   faChevronRight,
 } from "@fortawesome/free-solid-svg-icons";
+
+// images imports for now
 import whyInvestImg from "../../assets/whyinvest.webp";
 import whatIsTheStockMarketImg from "../../assets/whatisthestockmarket.webp";
 import setYourGoalsImg from "../../assets/setyourgoals.webp";
@@ -14,13 +17,14 @@ import understandingChartsImg from "../../assets/understandingcharts.jpg";
 import whatIsAStockImg from "../../assets/whatisastock.webp";
 import whatIsAnOptionImg from "../../assets/whatisanoption.jpg";
 import isCryptocurrencyAScamImg from "../../assets/iscryptocurrencyascam.webp";
+
 import "./Home.css";
 
 export default function Home() {
-  // State to toggle showing more or less stock screeners
-  const [showMoreStockScreeners, setShowMoreStockScreeners] = useState(false);
+  const [showMoreStockScreeners, setShowMoreStockScreeners] = useState(false); // state to toggle showing more or less stock screeners
+  const navigate = useNavigate(); // hook to navigate to different pages from the home page that arent in the bottom nav
 
-  // Learn section cards array
+  // Learn section cards array hardcoded for now
   const learnCards = [
     { title: "Why Invest?", img: whyInvestImg },
     { title: "What is the Stock Market?", img: whatIsTheStockMarketImg },
@@ -31,7 +35,7 @@ export default function Home() {
     { title: "Is Cryptocurrency a Scam?", img: isCryptocurrencyAScamImg },
   ];
 
-  // Stock screeners section list items array
+  // Stock screeners section list items array hardcoded for now
   const stockScreeners = [
     {
       title: "Daily Price Jumps",
@@ -47,7 +51,7 @@ export default function Home() {
     },
     {
       title: "New 52-Week Highs",
-      description: "Stocks that broek their 52-week high today",
+      description: "Stocks that broke their 52-week high today",
     },
     {
       title: "New 52-Week Lows",
@@ -58,6 +62,26 @@ export default function Home() {
       description: "Stock picks from third-party analysts",
     },
   ];
+
+  // hardcoded news cards array for now
+  const newsCards = [
+    {
+      title: "News 1",
+    },
+    {
+      title: "News 2",
+    },
+    {
+      title: "News 3",
+    },
+    {
+      title: "News 4",
+    },
+  ];
+
+  const handleNavigation = (path, state) => {
+    navigate(path, { state });
+  };
 
   return (
     <Container fluid className="home-container mb-5 page-container">
@@ -82,6 +106,8 @@ export default function Home() {
               <ListGroup.Item
                 key={idx}
                 as="li"
+                onClick={() => handleNavigation("/stock-screener", { screener })}
+                style={{ cursor: "pointer" }}
                 className={`home-stock-screeners-list-item ${
                   idx > 2 && !showMoreStockScreeners ? "collapsed" : ""
                 } d-flex justify-content-between align-items-center`}>
@@ -125,7 +151,7 @@ export default function Home() {
         <Col className="mb-3">
           <div className="learn-cards-container p-2 d-flex">
             {learnCards.map((learnCard, idx) => (
-              <Card key={idx} className="bg-dark text-white learn-card">
+              <Card key={idx} className="bg-dark text-white learn-card" onClick={() => handleNavigation("/learn", { learnCard })}>
                 <Card.Img
                   src={learnCard.img}
                   alt={`Learn Card ${idx + 1}`}
@@ -151,13 +177,13 @@ export default function Home() {
       <Row>
         <Col>
           <div className="news-cards-container p-2">
-            {stockScreeners.map((newsCard, idx) => (
-              <Card key={idx} className="bg-dark text-white news-card mb-3">
+            {newsCards.map((newsCard, idx) => (
+              <Card key={idx} className="news-card bg-dark text-white mb-3">
                 <Card.Img
                   src={"https://via.placeholder.com/300x200"}
                   alt={`News ${idx}`}
                 />
-                <Card.ImgOverlay className="d-flex flex-column justify-content-end">
+                <Card.ImgOverlay className="news-card-image d-flex flex-column justify-content-end">
                   <Card.Title className="fw-bold">{newsCard.title}</Card.Title>
                 </Card.ImgOverlay>
               </Card>

@@ -56,10 +56,8 @@
   }
   
   .learn-card {
-	background: transparent;
 	flex: 0 0 auto;
 	width: 250px;
-	border-radius: 15%;
 	overflow: hidden;
 	scroll-snap-align: center;
   }
@@ -79,4 +77,3 @@
   .home-news-title {
 	color: white;
   }
-  
