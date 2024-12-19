@@ -24,6 +24,35 @@ export default function Home() {
   const [showMoreStockScreeners, setShowMoreStockScreeners] = useState(false); // state to toggle showing more or less stock screeners
   const navigate = useNavigate(); // hook to navigate to different pages from the home page that arent in the bottom nav
 
+
+    // Stock screeners section list items array hardcoded for now
+    const stockScreeners = [
+      {
+        title: "Daily Price Jumps",
+        description: "Stocks with the biggest price jumps today",
+      },
+      {
+        title: "Daily Price Drops",
+        description: "Stocks with the biggest price drops today",
+      },
+      {
+        title: "Upcoming Earnings Reports",
+        description: "Companies reporting earnings in the next 2 weeks",
+      },
+      {
+        title: "New 52-Week Highs",
+        description: "Stocks that broke their 52-week high today",
+      },
+      {
+        title: "New 52-Week Lows",
+        description: "Stocks that broke their 52-week low today",
+      },
+      {
+        title: "Analyst Picks",
+        description: "Stock picks from third-party analysts",
+      },
+    ];
+    
   // Learn section cards array hardcoded for now
   const learnCards = [
     { title: "Why Invest?", img: whyInvestImg },
@@ -33,34 +62,6 @@ export default function Home() {
     { title: "What's a Stock?", img: whatIsAStockImg },
     { title: "Whats an Option?", img: whatIsAnOptionImg },
     { title: "Is Cryptocurrency a Scam?", img: isCryptocurrencyAScamImg },
-  ];
-
-  // Stock screeners section list items array hardcoded for now
-  const stockScreeners = [
-    {
-      title: "Daily Price Jumps",
-      description: "Stocks with the biggest price jumps today",
-    },
-    {
-      title: "Daily Price Drops",
-      description: "Stocks with the biggest price drops today",
-    },
-    {
-      title: "Upcoming Earnings Reports",
-      description: "Companies reporting earnings in the next 2 weeks",
-    },
-    {
-      title: "New 52-Week Highs",
-      description: "Stocks that broke their 52-week high today",
-    },
-    {
-      title: "New 52-Week Lows",
-      description: "Stocks that broke their 52-week low today",
-    },
-    {
-      title: "Analyst Picks",
-      description: "Stock picks from third-party analysts",
-    },
   ];
 
   // hardcoded news cards array for now
@@ -88,7 +89,7 @@ export default function Home() {
       <Row>
         <Col
           xs={6}
-          className="home-stock-screeners-title d-flex justify-content-start align-items-center mt-3">
+          className="home-stock-screeners-title d-flex justify-content-start align-items-center mt-2">
           <h5 className="fw-bold">Stock Screeners</h5>
         </Col>
         <Col
@@ -178,7 +179,7 @@ export default function Home() {
         <Col>
           <div className="news-cards-container p-2">
             {newsCards.map((newsCard, idx) => (
-              <Card key={idx} className="news-card bg-dark text-white mb-3">
+              <Card key={idx} className="news-card bg-dark text-white mb-3" onClick={() => handleNavigation("/news", { newsCard })}>
                 <Card.Img
                   src={"https://via.placeholder.com/300x200"}
                   alt={`News ${idx}`}

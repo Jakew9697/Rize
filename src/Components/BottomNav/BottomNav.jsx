@@ -6,6 +6,7 @@ import {
   faBullhorn,
   faArrowTrendUp,
   faUser,
+  faSquarePlus,
 } from "@fortawesome/free-solid-svg-icons";
 import "./BottomNav.css";
 
@@ -22,6 +23,10 @@ export default function BottomNav() {
     { 
       paths: ["/discussions"], 
       icon: faBullhorn 
+    },
+    {
+      paths: ["/post"],
+      icon: faSquarePlus
     },
     { 
       paths: ["/trends"], 
@@ -43,9 +48,9 @@ export default function BottomNav() {
   };
 
   return (
-    <Navbar collapseOnSelect expand="lg" variant="dark" fixed="bottom" className="bottom-nav">
+    <Navbar collapseOnSelect expand="lg" fixed="bottom" className="bottom-nav p-0">
       <Container fluid>
-        <Navbar.Collapse className="d-flex justify-content-between mx-3">
+        <Navbar.Collapse className="d-flex justify-content-between">
           <Nav className="flex-row w-100 justify-content-between">
             {navItems.map((item, idx) => (
               <Nav.Link

@@ -59,12 +59,12 @@ export default function TopNav() {
   ];
 
   return (
-    <Navbar collapseOnSelect expand="lg" variant="dark" className="top-nav" sticky="top">
+    <Navbar collapseOnSelect expand="lg"  className="top-nav p-0" sticky="top">
       <Container fluid>
         <Nav className="flex-row">
           <Nav.Link
             as={Link}
-            to="/home"
+            to="/"
             className="top-nav-logo d-flex align-items-center"
             onClick={() => console.log("Home")}
           >
