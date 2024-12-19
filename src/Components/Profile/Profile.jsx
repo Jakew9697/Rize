@@ -11,17 +11,17 @@ export default function Profile() {
       setPosts([
         {
           id: 1,
-          content: "rippin bull markets yadig",
+          content: "ripping bull markets yadig",
           date: "December 20, 2023",
         },
         {
           id: 2,
-          content: "luke likes little girls",
+          content: "post txt 2",
           date: "December 18, 2023",
         },
         {
           id: 3,
-          content: "marcus thumbs his butthole... a lot",
+          content: "post txt 3",
           date: "December 15, 2023",
         },
       ]);

@@ -85,7 +85,7 @@ export default function Home() {
   };
 
   return (
-    <Container fluid className="home-container mb-5 page-container">
+    <div className="home-container mb-4">
       <Row>
         <Col
           xs={6}
@@ -177,7 +177,7 @@ export default function Home() {
       </Row>
       <Row>
         <Col>
-          <div className="news-cards-container p-2">
+          <div className="news-cards-container">
             {newsCards.map((newsCard, idx) => (
               <Card key={idx} className="news-card bg-dark text-white mb-3" onClick={() => handleNavigation("/news", { newsCard })}>
                 <Card.Img
@@ -192,6 +192,6 @@ export default function Home() {
           </div>
         </Col>
       </Row>
-    </Container>
+    </div>
   );
 }
